@@ -1,0 +1,42 @@
+{% extends 'app/dummy.html' %}
+
+
+{% block title %}
+    <title>Details page</title>
+{% endblock %}
+
+        
+{% block body_block %}
+    <h1>School Details</h1>
+
+    <table border="3px">
+        <tr>
+            <th>SName</th>
+            <th>SPrincipal</th>
+            <th>SLocation</th>
+        </tr>
+        <tr>
+            <td>{{SCO.Sname}}</td>
+            <td>{{SCO.Sprincipal}}</td>
+            <td>{{SCO.Slocation}}</td>
+        </tr>
+    </table>
+
+    <h1>Student details related to {{SCO}}</h1>
+
+    <table border="2px">
+        <tr>
+            <th>StName</th>
+            <th>StAge</th>
+            <th>SName</th>
+        </tr>
+        {% for i in SCO.students.all %}
+        <tr>
+            <td>{{i.Stname}}</td>
+            <td>{{i.Stage}}</td>
+            <td>{{i.Sname}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

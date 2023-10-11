@@ -1,0 +1,23 @@
+{% extends 'app/dummy.html' %}
+
+
+{% block title %}
+    <title>Student Details page</title>
+{% endblock %}
+
+        
+{% block body_block %}
+    <h1>Student Details</h1>
+
+    <table border="3px">
+        <tr>
+            <th>Student Name</th>
+            <th>Student Age</th>
+            <th>School Name</th>
+        </tr>
+        <tr>
+            <td>{{STO.Stname}}</td>
+            <td>{{STO.Stage}}</td>
+            <td>{{STO.Sname}}</td>
+        </tr>
+    </table>

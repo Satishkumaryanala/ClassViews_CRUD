@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <center>
-        <h1>StudentList</h1>
+{% extends 'app/dummy.html' %}
 
-        {% for sc in Schools %}
-            <a href="{{sc.pk}}">{{sc.Sname}}</a><br><br>
-        {% endfor %}
-    </center>
-</body>
-</html>
+
+{% block title %}
+    <title>List page</title>
+{% endblock %}
+
+        
+{% block body_block %}
+    <h1>School List</h1>
+
+    {% for sc in Schools %}
+        <a href="{{sc.pk}}">{{sc.Sname}}</a><br><br>
+    {% endfor %}
+
+{% endblock %}
