@@ -37,6 +37,10 @@
             <td>{{i.Sname}}</td>
         </tr>
         {% endfor %}
-    </table>
+    </table><br><br>
+
+    <a href="{% url 'SchoolUpdate' pk=SCO.pk %}" class="btn btn-primary">Update</a>
+    <a href="{% url 'SchoolDelete' pk=SCO.pk %}" class="btn btn-primary">Delete</a>
+
 
 {% endblock %}

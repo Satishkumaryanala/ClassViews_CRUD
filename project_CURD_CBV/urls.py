@@ -25,8 +25,10 @@ urlpatterns = [
     path('SchoolList/',SchoolList.as_view(),name='SchoolList'),
     path('SchoolCreate/',SchoolCreate.as_view(),name='SchoolCreate'),
     path('StudentCreate/',StudentCreate.as_view(),name='StudentCreate'),
+    path('StudentList/',StudentList.as_view(),name='StudentList'),
 
 
+    re_path('^update/(?P<pk>\d+)/',SchoolUpdate.as_view(), name='SchoolUpdate'),
+    re_path('^delete/(?P<pk>\d+)/',SchoolDelete.as_view(), name='SchoolDelete'),
     re_path('(?P<pk>\d+)/',SchoolDetails.as_view(), name='SchoolDetails'),
-    re_path('(?P<pk>\d+)/',StudentDetails.as_view(),name='StudentDetails'),
 ]

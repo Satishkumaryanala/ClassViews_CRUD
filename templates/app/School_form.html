@@ -7,14 +7,27 @@
 
         
 {% block body_block %}
-    <h1>Create Details</h1>
+
+{% if form.instance %}
+    
+    <h1>Update School Data</h1>.
+{% else %}
+    <h1>Create School Data</h1>
+{% endif %}
 
     <form method="POST">
         {% csrf_token %}
         
         {{form.as_p}}
 
-        <input type="submit" value="Create">
+
+        {% if form.instance %}
+            <input type="submit" value="Update">
+        {% else %}
+            <input type="submit" value="Create">
+        {% endif %}
+        
     </form>
 
+    
 {% endblock %}
