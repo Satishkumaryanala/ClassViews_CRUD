@@ -8,7 +8,7 @@
         
 {% block body_block %}
 
-{% if form.instance %}
+{% if form.instance.pk %}
     
     <h1>Update School Data</h1>.
 {% else %}
@@ -21,7 +21,7 @@
         {{form.as_p}}
 
 
-        {% if form.instance %}
+        {% if form.instance.pk %}
             <input type="submit" value="Update">
         {% else %}
             <input type="submit" value="Create">
